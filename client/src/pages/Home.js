@@ -1,11 +1,11 @@
 import React from "react";
 import ThoughtList from "../components/ThoughtList";
 import { useQuery } from "@apollo/client";
-import { QUERY_THOUGHTS } from "../utils/queries";
+import { QUERY_THOUGHT } from "../utils/queries";
 
 const Home = () => {
   //use usequery hook to make query request
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const { loading, data } = useQuery(QUERY_THOUGHT);
   const thoughts = data?.thoughts || [];
   console.log(thoughts);
 
